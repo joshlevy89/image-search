@@ -1,0 +1,18 @@
+html
+    head
+        link(rel='shortcut icon', href='/img/favicon.ico')
+        title Image Search
+    body
+        link(rel='stylesheet', href='/css/response.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lora',type="text/css")
+        for result in results
+            div.res {
+            span link: 
+            a(href=result.link, target='_blank') 
+                span #{result.link}
+            div snippet: #{result.snippet}
+            span site: 
+            a(href=result.image.contextLink,target='_blank')
+                span #{result.image.contextLink}
+            div }
+            
